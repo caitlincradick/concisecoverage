@@ -1,14 +1,17 @@
 import React from 'react'
+import dayjs from 'dayjs'
 import './Header.css'
 
 const Header = () => {
 
-  const formattedDate = dayjs(date).format('MMMM D, YYYY')
+ const currentDate = dayjs()
+ const day = currentDate.format('dddd')
+ const formattedDate = currentDate.format('MM-DD-YYYY')
 
-  
+
   return (
     <div className = 'header'>
-    <p> Today's Date: </p>
+    <p> {`${day}, ${formattedDate}`} </p>
     <h1>CONCISE COVERAGE</h1>
       </div>
   )
