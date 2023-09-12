@@ -2,19 +2,19 @@ export const data = {
   "status": "ok",
   "totalResults": 488,
   "articles": [
-      {
-          "source": {
-              "id": "time",
-              "name": "Time"
-          },
-          "author": "Harry Wilson and Alex Wickham / Bloomberg",
-          "title": "Sunak Confronts Chinese Premier Li After  Westminster Spying Arrests",
-          "description": "British Prime Minister Rishi Sunak said he had “significant concerns” after two men were arrested in the U.K. for allegedly spying for China.",
-          "url": "https://time.com/6312585/uk-china-spying-arrests/",
-          "urlToImage": "https://api.time.com/wp-content/uploads/2023/09/GettyImages-1669825527.jpg?quality=85",
-          "publishedAt": "2023-09-11T12:32:40Z",
-          "content": "British Prime Minister Rishi Sunak told Chinese Premier Li Qiang he had significant concerns about interference from Beijing, hours after it emerged that two men had been arrested in the U.K. for all… [+1713 chars]"
+    {
+      "source": {
+          "id": null,
+          "name": "Cheezburger.com"
       },
+      "author": "Marielru, Marielru",
+      "title": "'Thanks To The Capybaras... Oyen Has A New Family': A Herd Of Capybaras Adopted A Stray Cat Into Their Family (Video)",
+      "description": "Cats have a reputation for… not being the friendliest animals. Now, we, as cat owners, know that's not true. It's not that cats are unfriendly, it's that cats are simply picky about who they are friendly with, and that sounds totally fair to us. Most times, a…",
+      "url": "https://cheezburger.com/4124934/thanks-to-the-capybaras-oyen-has-a-new-family-a-herd-of-capybaras-adopted-a-stray-cat-into-their",
+      "urlToImage": "https://i.chzbgr.com/thumb1200/4124934/hDDA81161/video-about-a-cat-befriending-a-bunch-of-capybaras-thumbnail-includes-a-cat-cuddling-a-capybara",
+      "publishedAt": "2023-09-11T15:08:52Z",
+      "content": "Cats have a reputation for not being the friendliest animals. Now, we, as cat owners, know that's not true. It's not that cats are unfriendly, it's that cats are simply picky about who they are frien… [+772 chars]"
+  },
       {
         "source": {
             "id": "the-next-web",
