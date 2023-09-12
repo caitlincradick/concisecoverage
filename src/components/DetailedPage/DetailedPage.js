@@ -2,7 +2,7 @@ import React from 'react'
 import './DetailedPage.css'
 
 const DetailedPage = ({data}) => {
-  console.log('deialakld', data[2])
+  
   return (
     <div className= 'detailed-page'>
       <div className='arrow'>

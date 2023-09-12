@@ -1,12 +1,18 @@
 import React from 'react'
 import './FilterTags.css'
 
-const FilterTags = () => {
+const FilterTags = ({setFilter}) => {
+
+const clearFilter = () => {
+  setFilter("")
+}
+
   return (
     <div className='filter-tags'>
-      <button>Climate</button>
-      <button>Politics</button>
-      <button>Vanderpump</button>
+      <button className='climate' value='climate' onClick={(e => setFilter(e.target.value))}>Climate</button>
+      <button className='politics' value='cats' onClick={(e => setFilter(e.target.value))}>Cats</button>
+      <button className='vanderpump' value= 'vanderpump' onClick={(e => setFilter(e.target.value))}>Vanderpump</button>
+    <button className='clear' onClick={clearFilter}>Clear Filters</button>
     </div>
   )
 }

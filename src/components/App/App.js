@@ -7,7 +7,7 @@ import {Routes, Route, Link} from 'react-router-dom'
 
 
 function App() {
-  console.log(data.articles)
+  
   return (
     <div className="App">
       <Header />
