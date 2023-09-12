@@ -1,0 +1,14 @@
+.filter-tags {
+  display: flex;
+  margin-top: 2%;
+  width: 40vw;
+  justify-content: space-around;
+  }
+
+  button {
+    height: 4vh;
+    border-radius: 15%;
+    border: none;
+    background: #fdfdd8;
+}
+  
