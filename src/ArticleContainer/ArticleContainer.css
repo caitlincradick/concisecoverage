@@ -1,0 +1,9 @@
+.home-image{
+  height: 150px;
+}
+
+.home-single {
+  border: 3px solid black;
+  width: 40vw;
+  margin-top: 2%
+}

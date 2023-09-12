@@ -1,4 +1,4 @@
-const data = {
+export const data = {
   "status": "ok",
   "totalResults": 488,
   "articles": [
