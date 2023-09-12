@@ -1,8 +1,7 @@
 import React from 'react'
 import './FilterTags.css'
 
-const FilterTags = ({filter, setFilter}) => {
-console.log('FILTER', filter)
+const FilterTags = ({setFilter}) => {
 
 const clearFilter = () => {
   setFilter("")
