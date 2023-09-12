@@ -11,9 +11,8 @@ const Header = () => {
 
   return (
     <div className = 'header'>
-    <h3>{`${day} `}</h3>
-    <p> {`${formattedDate}`} </p>
     <h1>CONCISE COVERAGE</h1>
+    <h3>{`${day}, ${formattedDate}`}</h3>
       </div>
   )
 }

@@ -1,0 +1,10 @@
+.detailed-image {
+  height: 40vh;
+}
+
+.arrow {
+  display:flex;
+  align-items: flex-start;
+  margin-left: 5%;
+  color:red
+}
