@@ -4,3 +4,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.h2 {
+  font-style: italic;
+  font-size: medium;
+}
