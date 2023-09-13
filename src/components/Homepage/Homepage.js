@@ -4,13 +4,13 @@ import FilterTags from '../../FilterTags/FilterTags'
 import { useState } from 'react'
 import './Homepage.css'
 
-const Homepage = ({data, isClicked, setIsClicked, title, setTitle}) => {
+const Homepage = ({data, isClicked, setIsClicked, title, setTitle, source, setSource}) => {
 const [filter, setFilter] = useState('')
 
   return (
     <div className ='homepage'>
       <FilterTags filter={filter} setFilter={setFilter}/>
-      <ArticleContainer data ={data} filter={filter} setFilter={setFilter} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle}/>
+      <ArticleContainer data ={data} filter={filter} setFilter={setFilter} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource}/>
     </div>
   )
 }
