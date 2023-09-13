@@ -7,9 +7,9 @@ const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitl
  
   console.log('TITLE', title)
 
-  const clicked = (e) => {
+  const clicked = (title) => {
       setIsClicked(true)
-      setTitle(e.target.id)
+      setTitle(title)
   }
 
   //make set the state for title then say if the title matches the title in the data display just that title or whatever 
@@ -19,12 +19,12 @@ const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitl
       const key = uuidv4()
   return (
     <Link to="/article" key={key}>
-    <div className='home-single'  id={article.title} onClick={(e) => clicked(e)} >
+    <div className='home-single' key={key} value={article.title} onClick={() => clicked(article.title)} >
       <h3 className='home-title'>{article.title}</h3>
       <img className='home-image'src={article.urlToImage}></img>
       <p className='home-description'>{article.description}</p>
     </div>
-    </Link>
+     </Link>
   )
 }
 })

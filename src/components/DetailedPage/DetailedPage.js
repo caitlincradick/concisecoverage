@@ -11,11 +11,11 @@ const DetailedPage = ({data, title, setTitle, setIsClicked}) => {
   }
 
 return data.map(article => {
-  // if(article.title === title) {
+  if(article.title === title) {
   return (
     <div className= 'detailed-page'>
      <Link to="/"><div className='arrow'>
-      <h1 onClick={clickHandle}>←</h1>
+      <h1>←</h1>
       </div>
       </Link> 
       <h1>{article.title}</h1>
@@ -24,7 +24,7 @@ return data.map(article => {
       <p className='content'>{article.content}</p>
     </div>
   )
-// }
+}
 })
 }
 
