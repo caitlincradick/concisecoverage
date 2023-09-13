@@ -6,7 +6,7 @@ const Header = () => {
 
  const currentDate = dayjs()
  const day = currentDate.format('dddd')
- const formattedDate = currentDate.format('MM-DD-YYYY')
+ const formattedDate = currentDate.format('MMMM DD, YYYY')
 
 
   return (

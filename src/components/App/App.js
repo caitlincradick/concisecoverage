@@ -6,6 +6,7 @@ import DetailedPage from '../DetailedPage/DetailedPage';
 import { getArticles } from '../../apiCalls';
 import {Routes, Route, Link} from 'react-router-dom'
 import { useState, useEffect } from 'react';
+import dayjs from 'dayjs'
 
 
 function App() {
@@ -13,10 +14,16 @@ function App() {
   const [title, setTitle] = useState("")
   const [articles, setArticles] = useState([])
   
-  console.log("article", articles)
+  const today = dayjs()
+  const formatToday = today.format('YYYY-MM-DD')
+  const threeDaysAgo = dayjs().subtract(2, 'day')
+  const formatThreeDaysAgo = threeDaysAgo.format('YYYY-MM-DD')
+
+
+  console.log(formatThreeDaysAgo)
   
   useEffect(() => {
-   getArticles()
+   getArticles(formatToday, formatThreeDaysAgo)
    .then(d => setArticles(d.articles))
   }, [])
  
