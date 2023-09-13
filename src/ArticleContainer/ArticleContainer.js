@@ -22,6 +22,7 @@ const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitl
     <div className='home-single' key={key} value={article.title} onClick={() => clicked(article.title)} >
       <h3 className='home-title'>{article.title}</h3>
       <img className='home-image'src={article.urlToImage}></img>
+      <p className='home-date'>{article.publishedAt}</p>
       <p className='home-description'>{article.description}</p>
     </div>
      </Link>
