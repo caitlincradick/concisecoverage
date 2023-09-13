@@ -12,7 +12,10 @@ import dayjs from 'dayjs'
 function App() {
   const [isClicked, setIsClicked] = useState(false)
   const [title, setTitle] = useState("")
+  const [source, setSource] = useState('')
   const [articles, setArticles] = useState([])
+
+  console.log(source)
   
   const today = dayjs()
   const formatToday = today.format('YYYY-MM-DD')
@@ -35,8 +38,8 @@ console.log(isClicked)
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle}/>} />
-        <Route path='/article' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle}/>} />
+        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource}/>} />
+        <Route path='/article' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource}/>} />
       </Routes>
     </div>
   );
