@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './DetailedPage.css'
 
 const DetailedPage = ({data, title, setTitle, setIsClicked, source}) => {
@@ -12,15 +12,17 @@ const DetailedPage = ({data, title, setTitle, setIsClicked, source}) => {
 
 return data.map(article => {
   if(article.title === title && article.source.name === source) {
+    console.log(article.publishedAt.slice(0,10))
   return (
-    <div className= 'detailed-page'>
-     <Link to="/"><div className='arrow'>
+    <div className= 'detailed-page' >
+     <NavLink to="/"><div className='arrow'style={{textDecoration:'none'}} >
       <h1>←</h1>
       </div>
-      </Link> 
+      </NavLink> 
       <h1>{article.title}</h1>
       <img className='detailed-image'src={article.urlToImage} alt={article.title}></img>
-      <h3 className='source'>Source:{article.source.name} Author:{article.author}</h3>
+      <h3 className='source'>Source:  {article.source.name}   Author: {article.author}</h3>
+      <p>Date:  {article.publishedAt.slice(0,10)}</p>
       <p className='content'>{article.content}</p>
     </div>
   )
