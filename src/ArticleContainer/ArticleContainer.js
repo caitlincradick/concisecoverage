@@ -3,26 +3,14 @@ import { v4 as uuidv4 } from 'uuid';
 import { NavLink } from 'react-router-dom';
 import './ArticleContainer.css'
 
-const ArticleContainer = ({articles, filter, selectedArticle, setSelectedArticle}) => {
- 
- 
+const ArticleContainer = ({ articles, filter, setSelectedArticle }) => {
 
   const clicked = (article) => {
-      // setIsClicked(true)
-      // setTitle(title)
-      // setSource(source.name)
-      setSelectedArticle(article)
+    setSelectedArticle(article)
   }
 
-  // if (
-  //   article.title &&
-  //   article.description &&
-  //   (article.title.toLowerCase().includes(filter) || article.description.toLowerCase().includes(filter))
-  // ) {
-  //make set the state for title then say if the title matches the title in the data display just that title or whatever 
-
   const singleArticle = articles.map(article => {
-    if(article.title.toLowerCase().includes(filter) || article.description.toLowerCase().includes(filter)) {
+    if (article.title.toLowerCase().includes(filter) || article.description.toLowerCase().includes(filter)) {
       const key = uuidv4()
       return (
         <NavLink to="/article" key={key} style={{ textDecoration: 'none', color: 'black' }}>
@@ -34,8 +22,6 @@ const ArticleContainer = ({articles, filter, selectedArticle, setSelectedArticle
           </div>
         </NavLink>
       )
-    } else if (!article){
-      <p>nada nada </p>
     }
   })
 
