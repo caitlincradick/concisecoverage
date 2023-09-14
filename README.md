@@ -6,7 +6,7 @@ The project aims to address the issue of an overwhelming news cycle and informat
 - (https://newsapi.org/docs/endpoints/everything)
 - API Key to access: apiKey=6af7ab5557284ac88194bcaa9f8ec36b
 - Please note it is limited to 1000 requests per day.
-The particular endpoint for this project is interpolated and dynamic, please refer to the apiCall folder in the repo. 
+- The particular endpoint for this project is interpolated and dynamic, please refer to the apiCall folder in the repo. 
 
 # Set-up Instructions
 1. Clone down this repo to your local machine
