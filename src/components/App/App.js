@@ -3,8 +3,9 @@ import Header from '../Header/Header';
 import { data } from '../../mockData';
 import Homepage from '../Homepage/Homepage';
 import DetailedPage from '../DetailedPage/DetailedPage';
+import ErrorPage from '../../ErrorPage/ErrorPage';
 import { getArticles } from '../../apiCalls';
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route, Navigate} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import dayjs from 'dayjs'
 
@@ -14,7 +15,7 @@ function App() {
   const [title, setTitle] = useState("")
   const [source, setSource] = useState('')
   const [articles, setArticles] = useState([])
-  const [article, setArticle] = useState([])
+  const [selectedArticle, setSelectedArticle] = useState([])
   //selected article to pass into details page
 
   console.log('title', articles)
@@ -40,8 +41,10 @@ console.log(isClicked)
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} article={article} setArticle={setArticle}/>} />
-        <Route path='/article' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} article={article}/>} />
+        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle} setSelectedArticle={setSelectedArticle}/>} />
+        <Route path='/selectedArticle' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle}/>} />
+        <Route path="/404" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </div>
   );

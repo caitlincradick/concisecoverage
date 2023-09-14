@@ -1,6 +1,7 @@
 .header {
-  margin-top: 1.5%;
+  /* margin-top: 1.5%; */
   border-bottom: 2.5px solid black;
   font-weight:bolder;
-  height: 16.5vh
+  height: 16.5vh;
+
 }

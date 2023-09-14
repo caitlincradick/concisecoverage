@@ -3,15 +3,15 @@ import { v4 as uuidv4 } from 'uuid';
 import { NavLink } from 'react-router-dom';
 import './ArticleContainer.css'
 
-const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitle, source, setSource}) => {
+const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitle, source, setSource, selectedArticle, setSelectedArticle}) => {
  
   console.log('source', source)
 
-  const clicked = (title, source) => {
-      setIsClicked(true)
-      setTitle(title)
-      setSource(source.name)
-      // setSingleArticle(article)
+  const clicked = (article) => {
+      // setIsClicked(true)
+      // setTitle(title)
+      // setSource(source.name)
+      setSelectedArticle(article)
   }
 
   // if (
@@ -26,7 +26,7 @@ const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitl
       const key = uuidv4()
       return (
         <NavLink to="/article" key={key} style={{ textDecoration: 'none', color: 'black' }}>
-          <div className='home-single' key={key} value={article.title} onClick={() => clicked(article.title, article.source)} >
+          <div className='home-single' key={key} value={article.title} onClick={() => clicked(article)} >
             <p className='home-date'>{article.publishedAt.slice(0, 10)}</p>
             <img className='home-image' src={article.urlToImage} alt={article.title}></img>
             <h3 className='home-title'>{article.title}</h3>
