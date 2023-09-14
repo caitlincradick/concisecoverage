@@ -10,8 +10,8 @@ const clearFilter = () => {
   return (
     <div className='filter-tags'>
       <button className='climate' value='climate' onClick={(e => setFilter(e.target.value))}>Climate</button>
-      <button className='politics' value='cats' onClick={(e => setFilter(e.target.value))}>Cats</button>
-      <button className='vanderpump' value= 'vanderpump' onClick={(e => setFilter(e.target.value))}>Vanderpump Rules</button>
+      <button className='tesla' value='tesla' onClick={(e => setFilter(e.target.value))}>Tesla</button>
+      <button className='apple' value= 'apple' onClick={(e => setFilter(e.target.value))}>Apple</button>
     <button className='clear' onClick={clearFilter}>Clear Filters</button>
     </div>
   )
