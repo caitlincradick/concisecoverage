@@ -2,8 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './DetailedPage.css'
 
-const DetailedPage = ({data, title, setTitle, setIsClicked, source}) => {
-  console.log('DEATIL TITLE', title)
+const DetailedPage = ({data, title, setTitle, setIsClicked, source, selectedArticle}) => {
+  console.log('DEATIL TITLE', selectedArticle)
 
   const clickHandle = () => {
     setTitle("")
@@ -11,7 +11,7 @@ const DetailedPage = ({data, title, setTitle, setIsClicked, source}) => {
   }
 
 return data.map(article => {
-  if(article.title === title && article.source.name === source) {
+  if(article === selectedArticle) {
     console.log(article.publishedAt.slice(0,10))
   return (
     <div className= 'detailed-page' >

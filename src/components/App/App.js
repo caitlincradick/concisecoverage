@@ -14,7 +14,7 @@ function App() {
   const [title, setTitle] = useState("")
   const [source, setSource] = useState('')
   const [articles, setArticles] = useState([])
-  const [article, setArticle] = useState([])
+  const [selectedArticle, setSelectedArticle] = useState([])
   //selected article to pass into details page
 
   console.log('title', articles)
@@ -40,8 +40,8 @@ console.log(isClicked)
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} article={article} setArticle={setArticle}/>} />
-        <Route path='/article' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} article={article}/>} />
+        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle} setSelectedArticle={setSelectedArticle}/>} />
+        <Route path='/article' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle}/>} />
       </Routes>
     </div>
   );
