@@ -2,9 +2,9 @@
 The project aims to address the issue of an overwhelming news cycle and information overload. The user is able to set parameters on what they would like to see displayed and have filters custom to those parameters to hone in on what they want to see. The user is able to click on an article and see a custom article displayed full-screen. This app is designed to minimize distractions with a minimal design. 
 
 # API & Endpoints 
-This was utilized as the source of the API and the endpoint for "everything". Custom request parameters with instructions can be found here as well. 
-(https://newsapi.org/docs/endpoints/everything)
-API Key to access: apiKey=6af7ab5557284ac88194bcaa9f8ec36b
+- This was utilized as the source of the API and the endpoint for "everything". Custom request parameters with instructions can be found here as well. 
+- (https://newsapi.org/docs/endpoints/everything)
+- API Key to access: apiKey=6af7ab5557284ac88194bcaa9f8ec36b
 - Please note it is limited to 1000 requests per day.
 The particular endpoint for this project is interpolated and dynamic, please refer to the apiCall folder in the repo. 
 
