@@ -9,40 +9,27 @@ import {Routes, Route, Navigate} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import dayjs from 'dayjs'
 
-
 function App() {
-  const [isClicked, setIsClicked] = useState(false)
-  const [title, setTitle] = useState("")
-  const [source, setSource] = useState('')
+
   const [articles, setArticles] = useState([])
   const [selectedArticle, setSelectedArticle] = useState([])
-  //selected article to pass into details page
 
-  console.log('title', articles)
-  
   const today = dayjs()
   const formatToday = today.format('YYYY-MM-DD')
   const threeDaysAgo = dayjs().subtract(2, 'day')
   const formatThreeDaysAgo = threeDaysAgo.format('YYYY-MM-DD')
-
-
-  console.log(formatThreeDaysAgo)
   
   useEffect(() => {
-   getArticles(formatToday, formatThreeDaysAgo)
-   .then(d => setArticles(d.articles))
+    getArticles(formatToday, formatThreeDaysAgo)
+      .then(d => setArticles(d.articles))
   }, [])
- 
 
-
-
-console.log(isClicked)
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle} setSelectedArticle={setSelectedArticle}/>} />
-        <Route path='/selectedArticle' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle}/>} />
+        <Route path='/' element={<Homepage articles={articles}  selectedArticle={selectedArticle} setSelectedArticle={setSelectedArticle}/>} />
+        <Route path='/article' element={<DetailedPage articles={articles} selectedArticle={selectedArticle}/>} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="*" element={<Navigate to="/404" />} />
       </Routes>

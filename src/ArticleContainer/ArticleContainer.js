@@ -3,9 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { NavLink } from 'react-router-dom';
 import './ArticleContainer.css'
 
-const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitle, source, setSource, selectedArticle, setSelectedArticle}) => {
+const ArticleContainer = ({articles, filter, selectedArticle, setSelectedArticle}) => {
  
-  console.log('source', source)
+ 
 
   const clicked = (article) => {
       // setIsClicked(true)
@@ -21,7 +21,7 @@ const ArticleContainer = ({data, filter, isClicked, setIsClicked, title, setTitl
   // ) {
   //make set the state for title then say if the title matches the title in the data display just that title or whatever 
 
-  const singleArticle = data.map(article => {
+  const singleArticle = articles.map(article => {
     if(article.title.toLowerCase().includes(filter) || article.description.toLowerCase().includes(filter)) {
       const key = uuidv4()
       return (

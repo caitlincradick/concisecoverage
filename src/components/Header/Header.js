@@ -8,7 +8,6 @@ const Header = () => {
  const day = currentDate.format('dddd')
  const formattedDate = currentDate.format('MMMM DD, YYYY')
 
-
   return (
     <div className='header'>
       <h1>CONCISE COVERAGE</h1>
