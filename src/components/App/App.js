@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import { data } from '../../mockData';
 import Homepage from '../Homepage/Homepage';
 import DetailedPage from '../DetailedPage/DetailedPage';
+import ErrorPage from '../../ErrorPage/ErrorPage';
 import { getArticles } from '../../apiCalls';
 import {Routes, Route, Link} from 'react-router-dom'
 import { useState, useEffect } from 'react';
@@ -42,6 +43,8 @@ console.log(isClicked)
       <Routes>
         <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle} setSelectedArticle={setSelectedArticle}/>} />
         <Route path='/selectedArticle' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} selectedArticle={selectedArticle}/>} />
+        <Route path="/404" element={<ErrorPage />} />
+        <Route path="*" element={<Navigate to="/404" />} />
       </Routes>
     </div>
   );
