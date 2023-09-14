@@ -14,8 +14,10 @@ function App() {
   const [title, setTitle] = useState("")
   const [source, setSource] = useState('')
   const [articles, setArticles] = useState([])
+  const [article, setArticle] = useState([])
+  //selected article to pass into details page
 
-  console.log(source)
+  console.log('title', articles)
   
   const today = dayjs()
   const formatToday = today.format('YYYY-MM-DD')
@@ -38,8 +40,8 @@ console.log(isClicked)
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource}/>} />
-        <Route path='/article' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource}/>} />
+        <Route path='/' element={<Homepage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} article={article} setArticle={setArticle}/>} />
+        <Route path='/article' element={<DetailedPage data={articles} isClicked={isClicked} setIsClicked={setIsClicked} title={title} setTitle={setTitle} source={source} setSource={setSource} article={article}/>} />
       </Routes>
     </div>
   );
