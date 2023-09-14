@@ -5,7 +5,7 @@ import Homepage from '../Homepage/Homepage';
 import DetailedPage from '../DetailedPage/DetailedPage';
 import ErrorPage from '../../ErrorPage/ErrorPage';
 import { getArticles } from '../../apiCalls';
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route, Navigate} from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import dayjs from 'dayjs'
 

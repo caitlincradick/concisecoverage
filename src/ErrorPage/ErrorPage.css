@@ -1,0 +1,9 @@
+.home-icon-img{
+  height:7vh;
+  margin-top: 2%
+}
+
+.home-icon {
+  display: flex;
+  margin-left: 5%;
+}
