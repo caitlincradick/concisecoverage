@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './DetailedPage.css'
 
-const DetailedPage = ({ data, selectedArticle }) => {
+const DetailedPage = ({ articles, selectedArticle }) => {
 
-  return data.map(article => {
+  return articles.map(article => {
     if (article === selectedArticle) {
       return (
         <div className='detailed-page' >
