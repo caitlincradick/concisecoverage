@@ -10,11 +10,11 @@ const Header = () => {
 
 
   return (
-    <div className = 'header'>
-    <h1>CONCISE COVERAGE</h1>
-    <h2 className='h2'>What you want to see, when you want to see it.</h2>
-    <h3>{`${day}, ${formattedDate}`}</h3>
-      </div>
+    <div className='header'>
+      <h1>CONCISE COVERAGE</h1>
+      <h2 className='h2'>What you want to see, when you want to see it.</h2>
+      <h3>{`${day}, ${formattedDate}`}</h3>
+    </div>
   )
 }
 
